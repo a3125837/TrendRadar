@@ -41,7 +41,7 @@ app:
 # ===============================================================
 schedule:
   enabled: false                        # 是否启用调度系统（true=启用, false=关闭，默认关闭）
-  preset: "morning_evening"             # 预设模板名称（见上方说明）
+  # preset: "morning_evening"             # 预设模板名称（见上方说明）
 
 
 # ===============================================================
@@ -260,7 +260,10 @@ display:
 #    配对项（如 Telegram token 和 chat_id）数量必须一致
 # ===============================================================
 notification:
-  enabled: true                       # 是否启用通知功能（true=启用, false=关闭）—— 总开关
+  enabled: false
+  channels:
+    wework:
+      webhook_url: ""                       # 是否启用通知功能（true=启用, false=关闭）—— 总开关
                                       # 开启 schedule 后此项仍为总开关：false=永远不推送，true=由调度控制
 
   # 推送渠道配置
